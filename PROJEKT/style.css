@@ -1,0 +1,22 @@
+.footer {
+    height: 50px;
+    background-color: #8e8e8e;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px 4px  rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    padding: 5px;
+    flex-direction: row;
+}
+
+.author {
+    display: inline-block;
+    color: #2f2f2f;
+    margin: 5px;
+}
+
+.actualTime {
+    display: inline-block;
+    color: #2f2f2f;
+    margin: 5px;
+}
