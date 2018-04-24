@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Strona</title>
+</head>
+<body>
+    <div id="div0" style="height: 200px; width: 200px; background-color: red;"></div>
+    <button id="btn0">Niech zacznie sie zabawa!</button>
+    <button id="btn1">Starczy...</button>
+    
+    <div id="zad3">
+        <h1 id="heading-one">Przykładowy nagłówek 1</h1>
+		<p id="paragraph-one">To jest przykład strony, która została zrobiona przy pomocy JS</p>
+		<span id="span-one">Uczymy się języka JavaScript.</span>
+		<br />
+		<p id="paragraph-two">Język JavaScript nie jest taki trudny.</p>
+		<span id="span-two">Czas trwania zajęć: 90 minut.</span>
+		<p id="paragraph-three">Technologie webowe</p>
+    </div>
+    
+    <script>
+        
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+        function logName(imie) {
+            console.log("Siema " + imie);
+        }
+        //console.log(log_kot);
+        //console.log(log_kot());
+        //console.log(log_kot("Michał"));
+        //var id = window.setInterval(logName, 1000, "Janusz");
+        var btn0 = document.getElementById("btn0");
+        btn0.addEventListener("click", btn0clicked);
+        function setColor() {
+            var div0 = document.getElementById("div0");
+            var color = getRandomColor();
+            div0.style.backgroundColor = color;
+            console.log(color);
+        }
+        var id;
+        function btn0clicked() {
+            id = window.setInterval(setColor, 100);
+        }
+        //console.log(btn0);
+        
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", btn1clicked);
+        function btn1clicked() {
+            window.clearInterval(id);
+        }
+        
+        
+        
+        var daysOfWeek = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
+        var months = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
+
+        var d = new Date();
+        console.log(d);
+
+        var day = daysOfWeek[d.getDay()];
+        var month = d.getMonth()+1;
+        var dateOfBirth = new Date(1997, 08, 14, 03, 00, 00); // ustawiamy datę z przeszłości w formacie: YYYY, MM, DD, HH, MM, SS
+        var difference = d.getYear() - dateOfBirth.getYear(); // wynik jest w milisekundach
+        var age = difference // 31556900000 // dzielone całkowicie przez liczbę milisekund w roku (przy założeniu, że to nie jest rok przestępny)
+        var date = d.getDate();
+
+        var el = document.getElementById('paragraph-three');
+        el.innerHTML = 'Dzisiaj jest: ' + day + '.' + '<br />' + 'Aktualny miesiąc: ' + month + '.' + '<br />' + 'Mój wiek w latach to: ' + age + '.' + '<br />' + 'Data wyświetlona w momencie wywołania metody: ' + date + '.';
+        
+        
+        var sentence = "Home sweet home ";
+        var p = document.getElementById('paragraph-one');
+        p.innerHTML = 
+            'Nasz ciąg ma długość: ' + sentence.length +
+            ' Jeśli zmienimy wszystkie znaki na wielkie ciąg będzie wyglądać tak: ' + sentence.toUpperCase() +
+            ' Na 10. pozycji znajduje się znak: ' + sentence[9] +
+            ' Ciąg ee znajduje się na miejscu: ' + sentence.search('ee') +
+            ' Ostatni indeks znaku e to: ' + sentence.lastIndexOf('e') +
+            ' Znaki od 8 do 14 to: ' +
+            ' Po usunięciu niepotrzebnych spacji nasz ciąg wygląda tak: ' + sentence.replace(' ', '') + 
+            ' Po zmianie me na w nasz ciąg wygląda tak: ' + sentence.replace('me', 'w');
+    </script>
+</body>
+</html>
