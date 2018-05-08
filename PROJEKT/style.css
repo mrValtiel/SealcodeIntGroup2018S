@@ -1,3 +1,7 @@
+body {
+    background-image: url(files/background.jpg);
+}
+
 .footer {
     height: 50px;
     background-color: #8e8e8e;
@@ -7,6 +11,26 @@
     margin: 20px;
     padding: 5px;
     flex-direction: row;
+}
+
+#ToDoList {
+    display: inline-block;
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(98, 98, 98, 0.9);
+    border: 5px solid #212121;
+    border-radius: 10px;
+}
+
+#newToDO {
+    display: inline-block;
+    width: 300ox;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(98, 98, 98, 0.9);
+    border: 5px solid #212121;
+    border-radius: 10px;
 }
 
 .author {
