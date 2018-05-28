@@ -14,7 +14,7 @@ function filter(t, f) {
 };
 
 function notEqual(x) {
-    return x!== 3;
+    return x !== 3;
 };
 
 function showFiltered() {

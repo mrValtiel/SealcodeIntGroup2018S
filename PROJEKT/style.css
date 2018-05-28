@@ -1,5 +1,8 @@
 body {
-    background-image: url(files/background.jpg);
+    background-image: url(files/chocolate1.jpg);
+    font-family: 'Ubuntu', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
@@ -10,12 +13,11 @@ body {
     box-shadow: 4px 4px 12px 4px  rgba(0, 0, 0, 0.5);
     margin: 20px;
     padding: 5px;
-    flex-direction: row;
 }
 
-#ToDoList {
-    display: inline-block;
-    width: 500px;
+#newToDO {
+    display: block;
+    width: 500ox;
     margin: 10px;
     padding: 10px;
     background-color: rgba(98, 98, 98, 0.9);
@@ -23,9 +25,9 @@ body {
     border-radius: 10px;
 }
 
-#newToDO {
-    display: inline-block;
-    width: 300ox;
+#ToDoList {
+    display: block;
+    width: 500px;
     margin: 10px;
     padding: 10px;
     background-color: rgba(98, 98, 98, 0.9);
@@ -41,6 +43,7 @@ body {
 
 .actualTime {
     display: inline-block;
+    align-self: flex-end;
     color: #2f2f2f;
     margin: 5px;
 }
