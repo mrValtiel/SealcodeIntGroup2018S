@@ -15,24 +15,31 @@ body {
     padding: 5px;
 }
 
-#newToDO {
-    display: block;
-    width: 500ox;
-    margin: 10px;
+#newToDo {
+    width: 500px;
+    margin: auto;
     padding: 10px;
     background-color: rgba(98, 98, 98, 0.9);
     border: 5px solid #212121;
     border-radius: 10px;
 }
 
-#ToDoList {
+#ToDoS {
     display: block;
     width: 500px;
-    margin: 10px;
+    margin: auto;
     padding: 10px;
     background-color: rgba(98, 98, 98, 0.9);
     border: 5px solid #212121;
     border-radius: 10px;
+}
+
+.el {
+    display: block;
+    margin: 1px;
+    padding: 5px;
+    border: 2px solid #212121;
+    border-radius: 5px;
 }
 
 .author {
@@ -41,7 +48,7 @@ body {
     margin: 5px;
 }
 
-.actualTime {
+#actualTime {
     display: inline-block;
     align-self: flex-end;
     color: #2f2f2f;

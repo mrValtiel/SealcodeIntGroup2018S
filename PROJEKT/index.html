@@ -9,26 +9,25 @@
 </head>
 <body>
 
-<div id="newToDO">
-    <form>
-        <p>Nowe zadanie:</p>
-        <input type="text" id="inputName">
-        <button type="submit">Dodaj</button>
-    </form>  
+<div id="newToDo">
+    <p>New task:</p>
+    <input type="text" id="title" size="50">
+    <p>Urgency:</p>
+    <input type="text" id="urgency" size="2">
+    <button type="submit" onclick="addToDo()">Add</button> 
 </div>
 
-<div id="ToDoList">
-    <p>zadanie 1</p>
-    Wykonane: <input type="checkbox">
-    <p>zadanie 2</p>
-    Wykonane: <input type="checkbox">
+<div id="ToDoS">
+    
 </div>
 
 <div class="footer">
-    <div class="author">Marek Garniec</div>
-    <div class="actualTime">//actual time</div>
+    <div class="author">Marek Garniec, </div>
+    <div id="actualTime">//actual time</div>
 </div>
 
 </body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="script.js"></script>
+<script src="clock.js"></script>
 </html>

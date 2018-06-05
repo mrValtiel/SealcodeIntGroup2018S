@@ -1,21 +1,9 @@
 var data = "Nothing";
+var kwasy = [];
 function set_data() {
     var body = document.getElementsByTagName("body")[0];
     body.innerHTML = data;
 }
-
-axios
-    .get("http:/vps487563.ovh.net:44444/api/v1/kwasy")
-    .then(function (response) {
-    console.log("Response received");
-    console.log(response);
-    data = response.status;
-    console.log(data);
-    //set_data();
-  })
-    .catch(function (error) {
-    console.log("Error appeared");
-  });
 
 function newKwas() {
     var _user = document.getElementById("user").value;
@@ -38,4 +26,42 @@ function newKwas() {
     }).catch(function(error) {
         console.log(error);
     });
+}
+
+function getKwasy() {
+    axios
+    .get("http:/vps487563.ovh.net:44444/api/v1/kwasy")
+    .then(function (response) {
+    console.log("Response received");
+    console.log(response);
+    data = response.status;
+    console.log(data);
+    kwasy = response.data;
+    //set_data();
+  })
+    .catch(function (error) {
+    console.log("Error appeared");
+  });
+}
+
+function fillList() {
+    axios
+    .get("http:/vps487563.ovh.net:44444/api/v1/kwasy")
+    .then(function (response) {
+    console.log("Response received");
+    //console.log(response);
+    data = response.status;
+    console.log(data);
+    kwasy = response.data;
+    var list = document.getElementById("lista");
+    for (var i = 0; i < kwasy.length; i++) {
+        var newLi = document.createElement('li');
+        newLi.innerHTML = "<a kref=" + kwasy[i].source + ">" + kwasy[i].title + "</a>";
+        console.log(newLi);
+        list.appendChild(newLi);
+    }
+  })
+    .catch(function (error) {
+    console.log("Error appeared");
+  });
 }

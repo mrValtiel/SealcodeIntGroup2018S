@@ -5,7 +5,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body style="background-color: #00a20c; padding: 10px; font-size: 40px;">
-    
+
+<div style="border: 3px solid black; padding: 5px;">  
 <form>
     <p>User:</p>
     <input type="text" id="user">
@@ -16,10 +17,18 @@
     <p>Tag:</p>
     <input type="text" id="tag">
 </form>
-
-
 <button onclick="newKwas()">Wyślij nowego kwasa!</button>
-    
+<br />
+<button onclick="getKwasy()">Pobierz kwasy (w konsoli)</button>
+</div> 
+
+<div style="border: 3px solid black; padding: 5px;">
+   <button onclick="fillList()">Wyświetl linki</button>
+    <ul id="lista">
+        
+    </ul>
+</div>
+
 </body>
 <script src="script.js"></script>
 </html>
