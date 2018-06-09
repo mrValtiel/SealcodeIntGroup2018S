@@ -1,23 +1,28 @@
 body {
-    background-image: url(files/chocolate1.jpg);
+    background-image: url(files/cosmos.jpg);
     font-family: 'Ubuntu', sans-serif;
     justify-content: center;
     align-items: center;
+    font-size: 22px;
+    color: black;
 }
 
 .footer {
     height: 50px;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
     background-color: #8e8e8e;
-    border: 2px solid black;
+    border: 5px solid black;
     border-radius: 10px;
     box-shadow: 4px 4px 12px 4px  rgba(0, 0, 0, 0.5);
-    margin: 20px;
     padding: 5px;
 }
 
 #newToDo {
     width: 500px;
     margin: auto;
+    margin-bottom: 5px;
     padding: 10px;
     background-color: rgba(98, 98, 98, 0.9);
     border: 5px solid #212121;
@@ -42,6 +47,43 @@ body {
     border-radius: 5px;
 }
 
+.elTitle {
+    font-size: 30px;
+}
+
+.markBtn {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #004b09;
+    color: aliceblue;
+    border: 2px solid #390000;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.deleteBtn {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #790000;
+    color: aliceblue;
+    border: 2px solid #390000;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.addBtn {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #005800;
+    color: aliceblue;
+    border: 2px solid #390000;
+    border-radius: 20px;
+    margin-left: 200px;
+}
+
 .author {
     display: inline-block;
     color: #2f2f2f;
@@ -50,7 +92,6 @@ body {
 
 #actualTime {
     display: inline-block;
-    align-self: flex-end;
     color: #2f2f2f;
-    margin: 5px;
+    margin: auto;
 }
